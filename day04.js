@@ -81,11 +81,14 @@ let number = [3, 2, 4, 5, 1, 7, 12, 22];
 
 function evenNumber(number){
     let even = [], x = 0;
-    console.log(number.length)
+    
     for(let i = 0; i < number.length; i++){
         if(number[i] % 2 == 0){
-            even[x] = number[i];
+            even[x] = number[i]; //return a new array that contains even numbers only
             x++;
+        }else{
+            number.splice(i,1); //remove all odd numbers in an array
+            i--;
         }
     }
 
@@ -94,6 +97,7 @@ function evenNumber(number){
 
 console.log(number)
 console.log(evenNumber(number));
+console.log(number)
 
 /**
  * 5. Write a function to split a string and convert it into an array of words
